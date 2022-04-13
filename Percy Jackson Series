@@ -1,0 +1,53 @@
+CREATE TABLE pjocharacters (id INTEGER PRIMARY KEY, fullname TEXT, primaryweapon TEXT, camp TEXT, parentid INTEGER);
+
+    INSERT INTO pjocharacters VALUES
+    (1, 'Percy Jackson', 'Demigod', 'sword', 16),
+    (2, 'Annabeth Chase', 'Demigod', 'knife', 5),
+    (3, 'Aphrodite', 'God', null, null),
+    (4, 'Ares', 'God', 'spear', 20),
+    (5, 'Athena', 'God', 'spear', null),
+    (6, 'Bianca di Angelo', 'Demigod', 'bow', null),
+    (7, 'Calypso', 'Nymph', null, null),
+    (8, 'Charles Beckendorf', 'Demigod', 'forge', 21),
+    (9, 'Clarisse La Rue', 'Demigod', 'spear', 4),
+    (10, 'Ethan Nakamura', 'Demigod', 'sword', null),
+    (11, 'Grover Underwood', 'Satyr', 'pipes', null),
+    (12, 'Chiron', 'Centaur', 'bow', null),
+    (13, 'Juniper', 'Dryad', 'club', null),
+    (14, 'Luke Castellan', 'Demigod', 'sword', null),
+    (15, 'Nico di Angelo', 'Demigod', 'sword', null),
+    (16, 'Poseidon', 'God', 'trident', null),
+    (17, 'Selena Beauregard', 'Demigod', 'knife', 3),
+    (18, 'Thalia Grace', 'Demigod', 'spear', null),
+    (19, 'Rachel Elizabeth Dare', 'Oracle', null, null),
+    (20, 'Hera', 'God', 'magic', null),
+    (21, 'Hephaestus', 'God', 'forge', 20),
+    (22, 'Zoe Nightshade', 'Nymph', 'bow', null),
+    (23, 'Demeter', 'God', 'sickle', null),
+    (24, 'Will Solace', 'Demigod', 'bow', null),
+    (25, 'Sally Jackson', 'Mortal', null, null),
+    (26, 'Tyson', 'Cyclops', 'forge', 16);
+    
+SELECT * FROM pjocharacters;
+    
+CREATE TABLE canonromance (id INTEGER PRIMARY KEY, character1_id INTEGER, character2_id INTEGER);
+
+    INSERT INTO canonromance VALUES
+    (1, 1, 2),
+    (2, 3, 4),
+    (3, 3, 21),
+    (4, 8, 17),
+    (5, 11, 13),
+    (6, 15, 24),
+    (7, 16, 25);
+    
+    
+SELECT a.fullname AS character1, b.fullname AS character2 FROM canonromance
+    JOIN pjocharacters a
+    ON canonromance.character1_id = a.id
+    JOIN pjocharacters b 
+    ON canonromance.character2_id = b.id;
+
+SELECT pjocharacters.fullname AS child, a.fullname AS parent FROM pjocharacters
+    JOIN pjocharacters a
+    ON pjocharacters.parentID = a.id
