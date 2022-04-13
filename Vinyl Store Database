@@ -1,0 +1,25 @@
+CREATE TABLE Ash_Vinyls (id INTEGER PRIMARY KEY, album_name TEXT, cost INTEGER, genre TEXT, release_year INTEGER);
+
+INSERT INTO Ash_Vinyls VALUES(1, "Yours Truly", 30, "Pop", 2013);
+INSERT INTO Ash_Vinyls VALUES(2, "My Everything", 35, "Pop", 2014);
+INSERT INTO Ash_Vinyls VALUES(3, "Dangerous Woman", 40, "R&B", 2016);
+INSERT INTO Ash_Vinyls VALUES(4, "christmas & chill", 55, "Holiday", 2015);
+INSERT INTO Ash_Vinyls VALUES(5, "sweetener", 45, "Contemporary Pop", 2018);
+INSERT INTO Ash_Vinyls VALUES(6, "thank u, next", 40, "Pop", 2019);
+INSERT INTO Ash_Vinyls VALUES(7, "positions", 40, "R&B", 2020);
+INSERT INTO Ash_Vinyls VALUES(8, "k, bye for now", 60, "Live Albums", 2019);
+INSERT INTO Ash_Vinyls VALUES(9, "Tina Snow", 40, "Rap", 2018);
+INSERT INTO Ash_Vinyls VALUES(10, "Fever", 45, "Rap", 2019);
+INSERT INTO Ash_Vinyls VALUES(11, "Suga", 45, "Rap", 2020);
+INSERT INTO Ash_Vinyls VALUES(12, "Good News", 40, "Rap", 2020);
+INSERT INTO Ash_Vinyls VALUES(13, "Something for Thee Hotties", 40, "Rap", 2021);
+INSERT INTO Ash_Vinyls VALUES(14, "Merry Christmas", 25, "Holiday", 1994);
+INSERT INTO Ash_Vinyls VALUES(15, "E=MC2", 30, "R&B", 2008);
+INSERT INTO Ash_Vinyls VALUES(16, "The Emancipation of Mimi", 35, "R&B", 2005);
+
+SELECT * FROM Ash_Vinyls;
+
+SELECT album_name, cost FROM Ash_Vinyls ORDER BY release_year;
+
+SELECT SUM(cost) FROM Ash_Vinyls;
+
