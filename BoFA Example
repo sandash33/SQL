@@ -1,4 +1,4 @@
-# Int his 
+#In this table we were tasked into creating a very simple table and alter tables after creation, and change tables using the alter, update, and delete commands.
 
 CREATE TABLE bankofamerica 
     (id INTEGER PRIMARY KEY, accountname TEXT, accounttype TEXT, amount INTEGER);
