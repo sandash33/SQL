@@ -1,0 +1,26 @@
+# Int his 
+
+CREATE TABLE bankofamerica 
+    (id INTEGER PRIMARY KEY, accountname TEXT, accounttype TEXT, amount INTEGER);
+    
+INSERT INTO bankofamerica (accountname, accounttype, amount) VALUES
+    ('Spending', 'Checking', 300),
+    ('Emergency', 'Savings', 500),
+    ('Savings', 'Savings', 1000),
+    ('Extra', 'Savings', 50);
+    
+SELECT * FROM bankofamerica;
+
+ALTER TABLE bankofamerica ADD accounttier TEXT DEFAULT 'unknown';
+
+SELECT * FROM bankofamerica;
+
+UPDATE bankofamerica SET accounttier = 'Bronze'
+    WHERE amount < 5000;
+    
+SELECT * FROM bankofamerica;
+
+DELETE FROM bankofamerica
+    WHERE id = 4;
+    
+SELECT * FROM bankofamerica;
