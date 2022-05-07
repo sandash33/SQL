@@ -3,7 +3,7 @@
 Show Customers (their full names, customer ID, and country) who are not in the US. (Hint: != or <> can be used to say "is not equal to").
 SELECT DISTINCT customerid, firstname, lastname, country
 FROM chinook.customers
-WHERE country != 'US'
+WHERE country != 'USA'
 ORDER BY customerid;
 
 Show only the Customers from Brazil.
