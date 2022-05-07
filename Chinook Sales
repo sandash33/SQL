@@ -23,7 +23,7 @@ ORDER BY invoiceid;
 Show the Employees who are Sales Agents.
 SELECT lastname, firstname, title
 FROM chinook.employees
-WHERE title LIKE '%sales%'
+WHERE title = 'Sales Support Agent'
 ORDER BY lastname;
 
 Find a unique/distinct list of billing countries from the Invoice table.
